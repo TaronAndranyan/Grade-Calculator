@@ -7,18 +7,26 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="grade">
-      <h1 style="color:blue"> CSE 120 </h1>
-      <h2> Taron Andranyan </h2>
+    <script src="script.js"></script>
+    <div id="header">
+      <h1> Grade Calculator </h1>
+      <h2> CSE 120 </h2>
+      <h3> Taron Andranyan</h3>
       <hr>
       <h3> Grade Percentages </h3>
+    </div>
+
+    <div id="Percentages">
       <ul>
-        <li> Participation - 10% </li>
-        <li> Homework - 20% </li>
-        <li> Project Milestone 1 - 20% </li>
-        <li> Project Milestone 2 - 20% </li>
-        <li> Project Milestone 3 - 30% </li>
+        <li id="part_percent"> Participation - <span class="percentage" id="PartPercent">10</span>%</li>
+        <li id="hw-percent"> Homework - <span class="percentage" id = "hwpercent"> 20</span>%</li>
+        <li id="pm-percent"> Project Milestone 1 -<span class="percentage" id="pmpercent">20</span>%</li>
+        <li id="pm2-percent"> Project Milestone 2 - <span class="percentage" id="pm2percent">20</span>%</li>
+        <li id="pm3-percent"> Project Milestone 3 -<span class="percentage" id="pm3percent">30</span>%</li>
+    </div>
       <hr>
+
+      <div id="Grades">
       <h3> My Grades </h3>
       <ul>
        <li> Participation - <input type="number" id = "part_grade"> </li>
@@ -27,10 +35,13 @@
        <li> Project Milestone 2 - <input type="number" id = "prmil2"> </li>
        <li> Project Milestone 3 - <input type="number" id = "prmil3"> </li>
       </ul>
+      </div>
       <hr>
       <h3
-    <script src="script.js"><button onclick="grade_calculator()"<id = mycurrentgrade> Calculate my current grade</button></script>
-    <p> My current grade is <id=mycurrentgrade><p>
+    <script src="script.js"></script>
+    <input type="button" value="Calculate My Grade"
+     onclick="GradeCalculator()">
+    <div id="mycurrentgrade"></div>
     </div>
   </body>
 </html>
